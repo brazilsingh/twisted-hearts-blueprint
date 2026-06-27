@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twisted Hearts — Marketing Blueprint</title>
+<meta name="description" content="The marketing blueprint for Twisted Hearts: a shareable 'relationship sin' quiz that turns strangers into an owned audience and a $2.99 Prime rental into the start of a fanbase.">
+<meta property="og:title" content="Twisted Hearts — Marketing Blueprint">
+<meta property="og:description" content="Quiz-to-Prime funnel strategy for Cue & Coda Films.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500;1,9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-900:#0E0709;
+    --ink-850:#130A0E;
+    --ink-800:#170C11;
+    --ink-700:#1E1117;
+    --ink-600:#2A1A21;
+    --wine:#8E1F30;
+    --wine-bright:#C02A41;
+    --gold:#C9A24B;
+    --gold-soft:#E3C481;
+    --blush:#E7AEB3;
+    --cream:#F4E9E3;
+    --rose-grey:#BBA0A6;
+    --rose-faint:#80686E;
+    --line:rgba(201,162,75,.18);
+    --line-strong:rgba(201,162,75,.34);
+    --maxw:1080px;
+    --pad-section:clamp(4.5rem,9vw,8rem);
+    --r:14px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink-900);
+    color:var(--cream);
+    font-family:'Instrument Sans',system-ui,sans-serif;
+    font-size:clamp(1rem,.55vw + .9rem,1.12rem);
+    line-height:1.7;
+    letter-spacing:.005em;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--wine);color:var(--cream)}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:clamp(1.4rem,5vw,3rem)}
+
+  a{color:inherit}
+
+  /* ---------- type ---------- */
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;align-items:center;gap:.7rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.6;display:inline-block}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  .display{
+    font-weight:900;
+    font-size:clamp(2.9rem,8vw,6.4rem);
+    line-height:.95;
+    letter-spacing:-.02em;
+  }
+  .display em{font-style:italic;font-weight:500;color:var(--gold-soft)}
+  h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:.4rem}
+  h2 em{font-style:italic;font-weight:500;color:var(--gold-soft)}
+  h3{font-size:clamp(1.25rem,2vw,1.5rem);font-weight:600}
+  p{color:var(--rose-grey)}
+  p strong, li strong{color:var(--cream);font-weight:600}
+  .lead{font-size:clamp(1.1rem,1.4vw,1.32rem);color:var(--cream);line-height:1.6}
+
+  .section{padding-block:var(--pad-section);position:relative}
+  .section--alt{background:
+    linear-gradient(180deg,var(--ink-850),var(--ink-800) 50%,var(--ink-850));
+    border-block:1px solid var(--line)}
+
+  .kicker{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-faint);margin-bottom:1.6rem;display:flex;align-items:center;gap:.8rem}
+  .kicker .num{color:var(--wine-bright);font-weight:700}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;min-height:96vh;display:flex;align-items:center;
+    padding-block:6rem 4rem;
+    background:
+      radial-gradient(120% 80% at 78% -10%, rgba(142,31,48,.42), transparent 55%),
+      radial-gradient(90% 60% at 8% 8%, rgba(201,162,75,.14), transparent 50%),
+      linear-gradient(180deg,#0B0507,var(--ink-900));
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(140% 120% at 50% 120%, transparent 60%, rgba(0,0,0,.6));
+  }
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .mark{display:flex;align-items:center;gap:.85rem;margin-bottom:2.4rem}
+  .mark svg{filter:drop-shadow(0 0 14px rgba(192,42,65,.55))}
+  .mark .agency{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-grey)}
+  .mark .agency b{color:var(--gold)}
+  .hero-title{margin:1.4rem 0 1.6rem;max-width:16ch}
+  .hero-sub{max-width:46ch;font-size:clamp(1.05rem,1.5vw,1.32rem);color:var(--cream);line-height:1.55}
+  .hero-sub b{color:var(--gold-soft);font-weight:600}
+  .hero-meta{
+    margin-top:3rem;display:flex;flex-wrap:wrap;gap:1.2rem 2.4rem;
+    padding-top:1.6rem;border-top:1px solid var(--line);
+    font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.12em;color:var(--rose-faint);text-transform:uppercase;
+  }
+  .hero-meta b{color:var(--cream);font-weight:400}
+
+  /* ---------- thesis / pull ---------- */
+  .pull{
+    border-left:3px solid var(--wine);
+    padding:.2rem 0 .2rem 2rem;
+    margin:2.6rem 0;
+  }
+  .pull .q{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.45rem,3vw,2.2rem);line-height:1.3;color:var(--cream)}
+  .pull .q b{font-style:normal;color:var(--gold-soft)}
+
+  .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.4rem}
+  .card{
+    background:linear-gradient(180deg,var(--ink-700),var(--ink-800));
+    border:1px solid var(--line);border-radius:var(--r);
+    padding:1.7rem 1.6rem;
+  }
+  .card h3{margin-bottom:.5rem}
+  .card p{font-size:.98rem}
+  .card .tag{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wine-bright);display:block;margin-bottom:.9rem}
+
+  /* ---------- flywheel ---------- */
+  .flywheel-row{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+  .flywheel-row p{margin-bottom:1rem}
+  .fly-wrap{display:flex;justify-content:center}
+  .fly{width:100%;max-width:420px;height:auto}
+
+  /* ---------- stages ---------- */
+  .stages{margin-top:2.6rem;position:relative}
+  .stage{
+    display:grid;grid-template-columns:auto 1fr;gap:1.6rem;
+    padding:1.8rem 0;border-top:1px solid var(--line);
+  }
+  .stage:last-child{border-bottom:1px solid var(--line)}
+  .stage-no{
+    font-family:'Space Mono',monospace;font-size:.82rem;letter-spacing:.1em;
+    color:var(--wine-bright);padding-top:.4rem;white-space:nowrap;
+  }
+  .stage h3{margin-bottom:.5rem}
+  .stage h3 .role{display:block;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:.5rem}
+  .stage p{font-size:1rem}
+  .stage ul{list-style:none;margin-top:.8rem;display:flex;flex-direction:column;gap:.55rem}
+  .stage li{position:relative;padding-left:1.4rem;font-size:.97rem;color:var(--rose-grey)}
+  .stage li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg)}
+
+  /* sequence list reused */
+  .seq{counter-reset:s;margin-top:1.6rem;display:flex;flex-direction:column;gap:1rem}
+  .seq li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:baseline}
+  .seq li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Space Mono',monospace;color:var(--wine-bright);font-size:.85rem}
+  .seq li b{color:var(--cream)}
+  .seq li span{color:var(--rose-grey)}
+
+  /* ---------- seven sins (signature) ---------- */
+  .sins{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:1px;margin-top:2.8rem;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .sin{
+    background:linear-gradient(165deg,var(--ink-700),var(--ink-850));
+    padding:1.8rem 1.5rem 1.7rem;position:relative;
+    transition:background .4s ease, transform .4s ease;
+    min-height:172px;
+  }
+  .sin .rn{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--gold);opacity:.65;letter-spacing:.05em}
+  .sin h3{font-size:1.55rem;margin:.55rem 0 .55rem;font-weight:600}
+  .sin p{font-size:.92rem;line-height:1.5}
+  .sin::after{content:"";position:absolute;left:1.5rem;bottom:0;width:26px;height:2px;background:var(--wine);opacity:0;transition:opacity .4s,width .4s}
+  .sin:hover{background:linear-gradient(165deg,#241218,var(--ink-700));transform:translateY(-3px)}
+  .sin:hover h3{color:var(--blush)}
+  .sin:hover::after{opacity:1;width:48px}
+  .sins-note{margin-top:1.4rem;font-size:.95rem;color:var(--rose-grey)}
+  .sins-note b{color:var(--gold-soft)}
+
+  /* ---------- table ---------- */
+  .table-wrap{margin-top:2.4rem;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:.96rem}
+  thead th{
+    background:var(--ink-700);text-align:left;font-family:'Space Mono',monospace;
+    font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);
+    font-weight:400;padding:1rem 1.2rem;
+  }
+  tbody td{padding:1rem 1.2rem;border-top:1px solid var(--line);vertical-align:top;color:var(--rose-grey)}
+  tbody tr td:first-child{color:var(--cream);font-weight:500}
+  tbody tr:hover td{background:rgba(142,31,48,.07)}
+  .rule-note{margin-top:1.4rem;font-size:.96rem;color:var(--rose-grey)}
+  .rule-note b{color:var(--blush)}
+
+  /* ---------- caution block ---------- */
+  .caution{
+    margin-top:2.4rem;border:1px solid var(--line-strong);border-left:3px solid var(--gold);
+    border-radius:var(--r);padding:1.7rem 1.8rem;background:rgba(201,162,75,.05);
+  }
+  .caution .lbl{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem;display:block}
+  .caution p{color:var(--cream);font-size:1rem}
+  .caution p + p{margin-top:.8rem;color:var(--rose-grey)}
+  .metrics{margin-top:1.8rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .metric{background:var(--ink-800);padding:1.1rem 1.2rem}
+  .metric .k{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wine-bright);display:block;margin-bottom:.4rem}
+  .metric .v{font-size:.95rem;color:var(--cream)}
+  .metric.star{background:linear-gradient(160deg,#2a1117,var(--ink-700))}
+  .metric.star .k{color:var(--gold)}
+
+  /* ---------- timeline ---------- */
+  .weeks{margin-top:2.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+  .week{border:1px solid var(--line);border-radius:var(--r);padding:1.5rem 1.4rem;background:linear-gradient(180deg,var(--ink-700),var(--ink-850));position:relative}
+  .week .w{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+  .week h3{font-size:1.15rem;margin-bottom:.7rem}
+  .week p{font-size:.92rem;line-height:1.55}
+
+  /* ---------- fixes ---------- */
+  .fixes{margin-top:2.4rem;display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .fix{background:var(--ink-800);padding:1.4rem 1.6rem;display:grid;grid-template-columns:auto 1fr;gap:1.3rem;align-items:start}
+  .fix .flag{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;color:var(--wine-bright);padding-top:.25rem;white-space:nowrap}
+  .fix b{color:var(--cream)}
+  .fix p{font-size:.95rem;margin-top:.25rem}
+  .fix code{font-family:'Space Mono',monospace;font-size:.85em;color:var(--gold-soft);background:rgba(201,162,75,.08);padding:.05em .4em;border-radius:4px}
+
+  /* ---------- closing ---------- */
+  .closing{text-align:center;background:
+    radial-gradient(80% 120% at 50% 0%, rgba(142,31,48,.3), transparent 60%),var(--ink-900)}
+  .closing .pull-final{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.5rem,3.4vw,2.6rem);line-height:1.32;max-width:22ch;margin:1.4rem auto 0;color:var(--cream)}
+  .closing .pull-final b{font-style:normal;color:var(--gold-soft)}
+
+  footer{padding-block:3.4rem;border-top:1px solid var(--line);text-align:center}
+  footer .fmark{display:flex;justify-content:center;align-items:center;gap:.7rem;margin-bottom:1rem}
+  footer p{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-faint);line-height:1.9}
+  footer p b{color:var(--gold)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:760px){
+    .flywheel-row{grid-template-columns:1fr;gap:2rem}
+    .fix{grid-template-columns:1fr;gap:.4rem}
+    .stage{grid-template-columns:1fr;gap:.5rem}
+    .hero{min-height:auto}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .sin,.week{transition:none}
+  }
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="mark">
+      <svg width="34" height="34" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 28C16 28 4 20.5 4 12.2C4 7.7 7.3 5 11 5C13.6 5 15.2 6.6 16 8C16.8 6.6 18.4 5 21 5C24.7 5 28 7.7 28 12.2C28 20.5 16 28 16 28Z" fill="#8E1F30" stroke="#C9A24B" stroke-width="1.1"/>
+        <path d="M16 8C16 8 13 12 16 15C19 18 16 23 16 23" stroke="#E3C481" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="agency">
+    Prepared by
+    <a href="https://www.linkedin.com/in/brazil-singh-rittik/" target="_blank" rel="noopener noreferrer">
+        <b>Brazil Singh</b>
+    </a>
+    · for Cue &amp; Coda Films
+</span>
+
+    <span class="eyebrow">Marketing Dossier · Confidential</span>
+
+    <h1 class="hero-title display">Twisted&nbsp;Hearts <em>- the marketing blueprint</em></h1>
+
+    <p class="hero-sub">A shareable <b>"relationship sin"</b> quiz that turns strangers into an owned audience - and a <b>$2.99 Prime rental</b> into the start of a fanbase.</p>
+
+    <div class="hero-meta">
+      <span>Film · <b>Twisted Hearts (2026)</b></span>
+      <span>Channel · <b>Quiz → Email/SMS → Prime</b></span>
+      <span>Status · <b>Launch Ready</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- THE REFRAME -->
+<section class="section section--alt" id="strategy">
+  <div class="wrap">
+    <div class="kicker"><span class="num">01</span> The strategy in one line</div>
+    <h2>Sell the rental. <em>Keep the audience.</em></h2>
+    <p class="lead" style="max-width:60ch;margin-top:.8rem">Turn a confessional quiz into an owned list of relationship-content lovers, convert that list to a $2.99 rental on impulse - then keep them for everything Cue&nbsp;&amp; Coda makes next.</p>
+
+    <div class="pull">
+      <p class="q">At $2.99, you can't <b>buy</b> a customer. So the quiz lead - not the rental - is the asset. The rental is just the first thing you sell it.</p>
+    </div>
+
+    <p style="max-width:64ch">The product nets roughly <strong>~$1.50 per rental</strong> after Amazon's cut. No paid ad pays that back. That single fact decides everything: <strong>organic, viral, and creators do the heavy lifting</strong>, paid is a retargeting scalpel only, and <strong>SMS becomes your sharpest weapon</strong> - because a movie rental is a Friday-night impulse, and a text at 8pm converts impulse better than anything you own.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <span class="tag">The asset</span>
+        <h3>The list, not the rental</h3>
+        <p>A relationship-quiz lead is worth far more than one rental over time - this film, the next one, merch, a sequel. Acquisition is justified against lifetime value, not $1.50.</p>
+      </div>
+      <div class="card">
+        <span class="tag">The engine</span>
+        <h3>The quiz spreads itself</h3>
+        <p>"Every relationship has a sin - what's yours?" is an identity hook people click on themselves and tag others into. Every share is a free new entry to the funnel.</p>
+      </div>
+      <div class="card">
+        <span class="tag">The closer</span>
+        <h3>SMS on movie night</h3>
+        <p>You already collect phone + SMS consent. A weekend-evening text to a warm lead is the highest-converting, lowest-cost move in the whole plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLYWHEEL -->
+<section class="section" id="flywheel">
+  <div class="wrap">
+    <div class="kicker"><span class="num">02</span> How it compounds</div>
+    <div class="flywheel-row">
+      <div>
+        <h2>A loop, <em>not a funnel</em></h2>
+        <p>Most film marketing pours money in the top and hopes for sales at the bottom. This is built to feed itself: every result is content, every share is a new lead, every lead is kept.</p>
+        <p>Your job is to maximise three numbers - <strong>quiz completion, lead capture, and share rate.</strong> Get those high and growth becomes near-free.</p>
+      </div>
+      <div class="fly-wrap">
+        <svg class="fly" viewBox="0 0 360 360" role="img" aria-label="Marketing flywheel: content drives to the quiz, the quiz captures leads, leads are nurtured, leads convert to a Prime rental, and the share card re-enters the loop.">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 z" fill="#C9A24B"/>
+            </marker>
+          </defs>
+          <circle cx="180" cy="180" r="120" fill="none" stroke="#2A1A21" stroke-width="1.5"/>
+          <!-- arc segments -->
+          <path d="M180 60 A120 120 0 0 1 283 122" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <path d="M289 135 A120 120 0 0 1 283 238" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <path d="M276 250 A120 120 0 0 1 180 300" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <path d="M165 299 A120 120 0 0 1 77 250" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <path d="M71 238 A120 120 0 0 1 71 122" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <path d="M77 110 A120 120 0 0 1 165 61" fill="none" stroke="#8E1F30" stroke-width="2" marker-end="url(#arr)"/>
+          <!-- center -->
+          <text x="180" y="174" text-anchor="middle" font-family="Fraunces,serif" font-style="italic" font-size="17" fill="#E3C481">the</text>
+          <text x="180" y="196" text-anchor="middle" font-family="Fraunces,serif" font-weight="900" font-size="22" fill="#F4E9E3">loop</text>
+          <!-- nodes -->
+          <g font-family="'Space Mono',monospace" font-size="9.5" fill="#F4E9E3" text-anchor="middle">
+            <text x="180" y="44">CONTENT</text>
+            <text x="316" y="128">QUIZ</text>
+            <text x="316" y="190">CAPTURE</text>
+            <text x="312" y="262">NURTURE</text>
+            <text x="180" y="328">RENTAL</text>
+            <text x="48" y="262">SHARE</text>
+            <text x="44" y="128">REACH</text>
+          </g>
+          <g fill="#C9A24B">
+            <circle cx="180" cy="60" r="3.5"/><circle cx="285" cy="120" r="3.5"/>
+            <circle cx="300" cy="180" r="3.5"/><circle cx="285" cy="240" r="3.5"/>
+            <circle cx="180" cy="300" r="3.5"/><circle cx="75" cy="240" r="3.5"/>
+            <circle cx="75" cy="120" r="3.5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section class="section section--alt" id="stages">
+  <div class="wrap">
+    <div class="kicker"><span class="num">03</span> The funnel, stage by stage</div>
+    <h2>Six stages, <em>one motion</em></h2>
+
+    <div class="stages">
+      <div class="stage">
+        <div class="stage-no">STAGE 01</div>
+        <div>
+          <h3><span class="role">Attract</span>Get people to the quiz</h3>
+          <p>Don't advertise the movie cold - advertise the <strong>question</strong>. The quiz is the best ad you have.</p>
+          <ul>
+            <li>Short-form video (TikTok / Reels / Shorts): read one provocative question, react to your result, dare the viewer to take it.</li>
+            <li>Creator seeding - your testimonial wall is full of actors who already love the film. Hand each their own "sin" card to post.</li>
+            <li>Quiz link in every bio. The quiz converts strangers; the homepage doesn't.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-no">STAGE 02</div>
+        <div>
+          <h3><span class="role">Capture</span>Quiz → lead</h3>
+          <p>Already well-built. Protect the conversion and push phone where you can.</p>
+          <ul>
+            <li>Keep the email-or-phone choice - lower friction lifts capture.</li>
+                      </ul>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-no">STAGE 03</div>
+        <div>
+          <h3><span class="role">Nurture</span>Where low-ticket is won</h3>
+          <p>A cold lead won't rent; a warmed one will. Run two parallel sequences.</p>
+          <ul>
+            <li><strong>Email (story):</strong> deliver the sin → "the couple in the film who shares it" → social proof + watch tonight → "send it to who needs it."</li>
+            <li><strong>SMS (impulse):</strong> instant result link, then the Friday/Saturday 8pm date-night nudge.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-no">STAGE 04</div>
+        <div>
+          <h3><span class="role">Convert</span>→ Prime, $2.99</h3>
+          <p>Win on timing, not discounts. Weekend evenings are your conversion window.</p>
+          <ul>
+            <li>Deep-link straight to the Amazon Prime detail page — never a homepage in between.</li>
+            <li>Frame price as trivial, experience as shared: "less than a coffee, better than scrolling."</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-no">STAGE 05</div>
+        <div>
+          <h3><span class="role">Amplify</span>The viral loop</h3>
+          <p>Your cheapest growth - so engineer it deliberately.</p>
+
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-no">STAGE 06</div>
+        <div>
+          <h3><span class="role">Retain</span>Monetise the list</h3>
+          <p>The rental is transaction one. The list is the business.</p>
+          <ul>
+            <li>Tag every lead by their sin for segmented future campaigns.</li>
+            <li>Re-engage for the next release, behind-the-scenes, merch, or a sequel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section class="section" id="channels">
+  <div class="wrap">
+    <div class="kicker"><span class="num">04</span> Channels &amp; budget logic</div>
+    <h2>Spend time, <em>not money</em>, up top</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Channel</th><th>Role</th><th>Spend</th></tr></thead>
+        <tbody>
+          <tr><td>Short-form video (organic)</td><td>Primary acquisition</td><td>Time, not money</td></tr>
+          <tr><td>Creator seeding</td><td>Trusted reach to the exact audience</td><td>Free → low (gifted)</td></tr>
+          <tr><td>Email + SMS</td><td>Nurture + conversion - the real revenue driver</td><td>Tool cost only</td></tr>
+          <tr><td>Paid (Meta / TikTok)</td><td><strong>Retargeting only</strong> - quiz-starters &amp; non-converters</td><td>Small, capped</td></tr>
+                  </tbody>
+      </table>
+    </div>
+    <p class="rule-note"><b>The rule:</b> never send cold paid traffic to a $2.99 page. Cold traffic (if any) goes to the quiz, where the payoff is a lead - not a rental.</p>
+  </div>
+</section>
+
+<!-- SEVEN SINS (signature) -->
+<section class="section section--alt" id="content">
+  <div class="wrap">
+    <div class="kicker"><span class="num">05</span> The content engine</div>
+    <h2>Seven sins, <em>seven content pillars</em></h2>
+    <p class="lead" style="max-width:58ch;margin-top:.6rem">You don't need to invent content - the quiz <em>is</em> the calendar. Each sin is a recurring theme: a hook, a relatable scene, then "this is that couple in&nbsp;Twisted&nbsp;Hearts."</p>
+
+    <div class="sins">
+      <div class="sin"><span class="rn">I</span><h3>Pride</h3><p>The partner who's never wrong.</p></div>
+      <div class="sin"><span class="rn">II</span><h3>Envy</h3><p>Measuring your love against couples online.</p></div>
+      <div class="sin"><span class="rn">III</span><h3>Wrath</h3><p>The silent-treatment relationship.</p></div>
+      <div class="sin"><span class="rn">IV</span><h3>Lust</h3><p>Chemistry mistaken for compatibility.</p></div>
+      <div class="sin"><span class="rn">V</span><h3>Greed</h3><p>Keeping score in love.</p></div>
+      <div class="sin"><span class="rn">VI</span><h3>Gluttony</h3><p>Too much, too fast.</p></div>
+      <div class="sin"><span class="rn">VII</span><h3>Sloth</h3><p>The situationship that won't move.</p></div>
+    </div>
+    <p class="sins-note">That's an <b>endless reel pipeline</b> - all on-brand, all funnelling to the quiz, all reusable across every channel.</p>
+  </div>
+</section>
+
+<!-- MEASUREMENT -->
+<section class="section" id="measure">
+  <div class="wrap">
+    <div class="kicker"><span class="num">06</span> Measurement &amp; the Amazon gap</div>
+    <h2>Measure the click, <em>infer the rental</em></h2>
+
+    <div class="caution">
+      <span class="lbl">⚠ Plan around this</span>
+      <p>Amazon PVOD gives filmmakers almost no purchase-level attribution. You <strong>cannot</strong> tie a specific lead to a specific rental.</p>
+      <p>So your north-star conversion is the <strong>Prime click-through</strong> - a trackable outbound click in GTM. Treat it as the proxy, then correlate <strong>aggregate Amazon sales reports against campaign timing</strong> to read true rental lift.</p>
+    </div>
+
+    <div class="metrics">
+           <div class="metric"><span class="k">Track</span><span class="v">Completion rate</span></div>
+      <div class="metric"><span class="k">Track</span><span class="v">Lead capture (email vs phone)</span></div>
+      <div class="metric"><span class="k">Track</span><span class="v">Email/SMS click → Prime</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 30-DAY PLAN -->
+<section class="section section--alt" id="plan">
+  <div class="wrap">
+    <div class="kicker"><span class="num">07</span> The first 30 days</div>
+    <h2>Plumbing, <em>then push</em></h2>
+    <div class="weeks">
+      <div class="week"><span class="w">Week 01</span><h3>Plumbing</h3><p>Fix the live leaks below. Finalise email + SMS sequences. Confirm GTM events fire cleanly.</p></div>
+      <div class="week"><span class="w">Week 02</span><h3>Seed</h3><p>Brief 10–20 creators with their own sin cards. Soft-launch to existing followers. Fix any quiz drop-off.</p></div>
+      <div class="week"><span class="w">Week 03</span><h3>Push</h3><p>Creators post in a cluster. Run the seven-sins content daily. Turn on retargeting. First weekend SMS blast.</p></div>
+      <div class="week"><span class="w">Week 04</span><h3>Compound</h3><p>Double down on the best two performers. Send the "send it on" email. Pull Amazon numbers against your Prime-click curve.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIXES -->
+<section class="section" id="fixes">
+  <div class="wrap">
+    <div class="kicker"><span class="num">08</span> Priority fixes - live now</div>
+    <h2>Quick wins <em>plugging real leaks</em></h2>
+    <p style="max-width:60ch;margin-top:.4rem">Spotted on the live assets. Each is fast and pays back immediately.</p>
+    <div class="fixes">
+      <div class="fix"><div class="flag">FIX 01</div><div><b>Set a real page title.</b><p>The movie homepage title is currently <code>New Page 1</code> - so every share on Facebook, iMessage and LinkedIn reads "New Page 1." </p></div></div>
+      <div class="fix"><div class="flag">FIX 02</div><div><b>Deep-link the Prime button.</b><p>The quiz result's "Watch on Prime" link routes through a domain instead of the Amazon detail page - an extra bounce at the exact moment of intent.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="section closing">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center">The bottom line</span>
+    <p class="pull-final">Building a quiz instead of buying rentals is the right call for a $2.99 film. Win on <b>completion, sharing, and SMS timing</b> - and treat the list, not the rental, as the prize.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fmark">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 28C16 28 4 20.5 4 12.2C4 7.7 7.3 5 11 5C13.6 5 15.2 6.6 16 8C16.8 6.6 18.4 5 21 5C24.7 5 28 7.7 28 12.2C28 20.5 16 28 16 28Z" fill="#8E1F30" stroke="#C9A24B" stroke-width="1.1"/>
+      </svg>
+    </div>
+    <p>Twisted Hearts · Marketing Blueprint<br>
+    Prepared by <b>Brazil Singh</b> for Cue &amp; Coda Films · 2026</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.section, .card, .sin, .week, .stage, .fix');
+    els.forEach(function(el){ el.classList.add('reveal'); });
+    if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      els.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
